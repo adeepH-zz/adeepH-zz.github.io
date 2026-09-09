@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Research &amp; Experience — Adeep Hande</title>
+<meta name="description" content="Adeep Hande's research and industry experience — LLM post-training, recommendation systems, and NLP at Comcast." />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">Adeep Hande</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="research.html" class="active">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="travel.html">Travel</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <div class="eyebrow">Research &amp; Experience</div>
+    <h1>What I work on</h1>
+    <p class="tagline">
+      LLM fine-tuning, sequential recommendation, and large-scale search &amp; content systems on the
+      Recommendation and Arbitration team at Comcast.
+    </p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div class="entry-title">ML Research Engineer, Comcast</div>
+          <div class="entry-meta">May 2024 &ndash; Present</div>
+        </div>
+        <div class="entry-sub">Recommendation and Arbitration team &middot; Washington, D.C.</div>
+        <ul class="bullets">
+          <li><strong>LLM post-training for user profile generation:</strong> built a teacher-student LLM post-training pipeline on a 3B-parameter student model &mdash; SFT with auxiliary reasoning objectives, DPO for alignment, and off-/on-policy evaluation &mdash; cascading fine-tuned models as teachers for downstream recommendation tasks.</li>
+          <li><strong>LLM data augmentation for cold-start recommendation:</strong> designed an LLM-based pipeline injecting synthetic user histories for cold-start items, achieving an 80% relative NDCG improvement while maintaining overall quality (CIKM 2026, EACL 2027).</li>
+          <li><strong>Xfinity Campaign Manager &mdash; forecasting:</strong> built campaign-level time-series forecasting models and ETL pipelines (Spark, Databricks, SQL) across EU and NA markets, with automated dashboarding for weekly media-buy pacing and budget allocation.</li>
+          <li><strong>Content discoverability simulator:</strong> architected a large-scale simulation using LLM-generated synthetic queries and historical clustering to evaluate upcoming content in the Xfinity TV ecosystem (RecSys 2025).</li>
+          <li><strong>Search quality evaluation:</strong> deployed a hybrid heuristic&ndash;LLM inference system for real-time moderation of 5M+ daily voice queries; introduced a time-aware dynamic lexicon reducing false positives by 35% (SIGIR 2025).</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div class="entry-title">Machine Learning Graduate Research Intern, Comcast</div>
+          <div class="entry-meta">May 2023 &ndash; Dec 2023</div>
+        </div>
+        <div class="entry-sub">Washington, D.C.</div>
+        <ul class="bullets">
+          <li><strong>Xfinity ASR evaluation tool:</strong> built an end-to-end speech evaluation framework benchmarking ASR quality (WER, embedding-based metrics) across diverse user demographics and acoustic conditions, scaling annotation throughput from 1K/day to 100K/week via automated proxy metrics.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="tags">
+        <div class="group">
+          <div class="group-label">Machine Learning &amp; NLP</div>
+          <span class="chip">Large Language Models</span>
+          <span class="chip">LLM Finetuning (DPO, SFT, RLHF)</span>
+          <span class="chip">Knowledge Distillation</span>
+          <span class="chip">Recommendation Systems</span>
+          <span class="chip">Ranking</span>
+          <span class="chip">Content Moderation</span>
+          <span class="chip">Retrieval-Augmented Generation</span>
+          <span class="chip">Bias &amp; Fairness</span>
+          <span class="chip">ASR Evaluation</span>
+          <span class="chip">Information Retrieval</span>
+        </div>
+        <div class="group">
+          <div class="group-label">Frameworks &amp; Libraries</div>
+          <span class="chip">PyTorch</span>
+          <span class="chip">TensorFlow</span>
+          <span class="chip">Hugging Face Transformers</span>
+          <span class="chip">LangChain</span>
+          <span class="chip">OpenAI API</span>
+          <span class="chip">MLflow</span>
+          <span class="chip">Airflow</span>
+        </div>
+        <div class="group">
+          <div class="group-label">Data &amp; Infrastructure</div>
+          <span class="chip">Spark</span>
+          <span class="chip">Databricks</span>
+          <span class="chip">AWS SageMaker</span>
+          <span class="chip">AWS Lambda</span>
+          <span class="chip">EC2</span>
+          <span class="chip">Docker</span>
+          <span class="chip">FastAPI</span>
+          <span class="chip">MongoDB</span>
+          <span class="chip">Kafka</span>
+        </div>
+        <div class="group">
+          <div class="group-label">Languages</div>
+          <span class="chip">Python</span>
+          <span class="chip">SQL</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="edu-row">
+        <div>
+          <div class="edu-school">Indiana University Bloomington</div>
+          <div class="edu-degree">M.S. in Data Science</div>
+        </div>
+        <div class="edu-date">May 2024</div>
+      </div>
+      <div class="edu-row">
+        <div>
+          <div class="edu-school">Indian Institute of Information Technology, Tiruchirappalli</div>
+          <div class="edu-degree">B.S. in Computer Science</div>
+        </div>
+        <div class="edu-date">Apr 2022</div>
+      </div>
+    </section>
+
+    <section id="service">
+      <h2>Service</h2>
+      <p>100+ peer reviews across academic venues including InterSpeech, SIGIR, COLING, ACL ARR, and ICASSP.</p>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    Adeep Hande &middot; Washington, D.C. &middot; <a href="mailto:adeephande1000@gmail.com">adeephande1000@gmail.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
