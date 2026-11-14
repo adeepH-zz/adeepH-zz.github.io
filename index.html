@@ -4,407 +4,217 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Adeep Hande</title>
-<meta name="description" content="Adeep Hande — ML Research Engineer working on LLMs, recommendation systems, and NLP." />
-<style>
-  :root{
-    --bg: #0b0d10;
-    --bg-elevated: #12151a;
-    --border: #22262d;
-    --text: #e7e9ec;
-    --text-dim: #9aa1ab;
-    --text-faint: #656c76;
-    --accent: #7dd3c0;
-    --accent-dim: #4d8f82;
-    --mono: 'SF Mono', 'JetBrains Mono', 'Fira Code', Consolas, monospace;
-    --sans: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    --maxw: 760px;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--text);
-    font-family:var(--sans);
-    font-size:16px;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
-  a{color:var(--accent); text-decoration:none;}
-  a:hover{text-decoration:underline;}
-  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px;}
-
-  header.hero{
-    padding: 88px 0 56px;
-    border-bottom:1px solid var(--border);
-  }
-  .eyebrow{
-    font-family:var(--mono);
-    font-size:13px;
-    color:var(--accent);
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    margin-bottom:14px;
-  }
-  h1{
-    font-size:2.5rem;
-    line-height:1.15;
-    margin:0 0 12px;
-    font-weight:600;
-    letter-spacing:-0.02em;
-  }
-  .tagline{
-    color:var(--text-dim);
-    font-size:1.08rem;
-    max-width:56ch;
-    margin:0 0 28px;
-  }
-  .links{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-  }
-  .links a{
-    font-family:var(--mono);
-    font-size:13px;
-    color:var(--text);
-    border:1px solid var(--border);
-    background:var(--bg-elevated);
-    padding:8px 14px;
-    border-radius:6px;
-    transition:border-color .15s ease, color .15s ease;
-  }
-  .links a:hover{
-    border-color:var(--accent-dim);
-    color:var(--accent);
-    text-decoration:none;
-  }
-
-  main{padding: 56px 0 40px;}
-  section{margin-bottom:56px;}
-  section:last-child{margin-bottom:0;}
-
-  h2{
-    font-family:var(--mono);
-    font-size:13px;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    color:var(--text-faint);
-    margin:0 0 22px;
-    display:flex;
-    align-items:center;
-    gap:12px;
-  }
-  h2::after{
-    content:"";
-    flex:1;
-    height:1px;
-    background:var(--border);
-  }
-
-  p{color:var(--text-dim); margin:0 0 14px;}
-
-  .entry{
-    margin-bottom:26px;
-    padding-bottom:26px;
-    border-bottom:1px solid var(--border);
-  }
-  .entry:last-child{border-bottom:none; margin-bottom:0; padding-bottom:0;}
-  .entry-head{
-    display:flex;
-    justify-content:space-between;
-    align-items:baseline;
-    gap:16px;
-    flex-wrap:wrap;
-    margin-bottom:4px;
-  }
-  .entry-title{
-    font-weight:600;
-    color:var(--text);
-    font-size:1.02rem;
-  }
-  .entry-meta{
-    font-family:var(--mono);
-    font-size:12.5px;
-    color:var(--text-faint);
-    white-space:nowrap;
-  }
-  .entry-sub{
-    color:var(--text-faint);
-    font-size:14px;
-    margin-bottom:10px;
-  }
-  ul.bullets{
-    margin:8px 0 0;
-    padding-left:18px;
-  }
-  ul.bullets li{
-    color:var(--text-dim);
-    margin-bottom:8px;
-    font-size:14.5px;
-  }
-  ul.bullets li::marker{ color: var(--accent-dim); }
-
-  .pub{
-    padding:14px 0;
-    border-bottom:1px solid var(--border);
-  }
-  .pub:last-child{border-bottom:none;}
-  .pub-venue{
-    font-family:var(--mono);
-    font-size:12px;
-    color:var(--accent);
-    letter-spacing:.03em;
-    text-transform:uppercase;
-    margin-bottom:4px;
-  }
-  .pub-title{
-    color:var(--text);
-    font-size:15px;
-  }
-  .pub-title a{ color: var(--text); border-bottom: 1px dotted var(--text-faint); }
-  .pub-title a:hover{ color: var(--accent); border-color: var(--accent); text-decoration:none; }
-
-  .tags{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-  }
-  .tags .group{
-    margin-bottom:16px;
-    width:100%;
-  }
-  .tags .group-label{
-    font-family:var(--mono);
-    font-size:12px;
-    color:var(--text-faint);
-    margin-bottom:8px;
-  }
-  .chip{
-    display:inline-block;
-    font-size:13px;
-    color:var(--text-dim);
-    background:var(--bg-elevated);
-    border:1px solid var(--border);
-    padding:5px 11px;
-    border-radius:999px;
-    margin:0 6px 6px 0;
-  }
-
-  .edu-row{
-    display:flex;
-    justify-content:space-between;
-    gap:16px;
-    flex-wrap:wrap;
-    padding:12px 0;
-    border-bottom:1px solid var(--border);
-  }
-  .edu-row:last-child{border-bottom:none;}
-  .edu-school{color:var(--text); font-weight:600; font-size:15px;}
-  .edu-degree{color:var(--text-dim); font-size:14px;}
-  .edu-date{font-family:var(--mono); font-size:12.5px; color:var(--text-faint); white-space:nowrap;}
-
-  footer{
-    border-top:1px solid var(--border);
-    padding:32px 0 64px;
-    color:var(--text-faint);
-    font-size:13px;
-    font-family:var(--mono);
-  }
-
-  @media (max-width: 600px){
-    header.hero{padding:56px 0 40px;}
-    h1{font-size:2rem;}
-    .entry-head{flex-direction:column; gap:2px;}
-  }
-</style>
+<meta name="description" content="Adeep Hande — ML Research Engineer at Comcast Applied AI Research working on LLM post-training, generative recommendation, and efficient inference." />
+<meta property="og:title" content="Adeep Hande" />
+<meta property="og:description" content="ML Research Engineer at Comcast Applied AI Research — LLM post-training, generative recommendation, efficient inference." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://adeeph-zz.github.io/" />
+<meta name="twitter:card" content="summary" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23a3452a'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' text-anchor='middle' fill='white'%3EAH%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:ital,wght@0,600;1,400&family=JetBrains+Mono&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
 
-<header class="hero">
+<header class="topnav">
   <div class="wrap">
-    <div class="eyebrow">Adeep Hande</div>
-    <h1>ML Research Engineer building LLM-powered recommendation &amp; retrieval systems.</h1>
-    <p class="tagline">
-      Working on LLM fine-tuning, sequential recommendation, and NLP at Comcast Applied AI Research.
-      Based in Washington, D.C.
-    </p>
-    <div class="links">
-      <a href="mailto:adeephande1000@gmail.com">Email</a>
-      <a href="https://scholar.google.com/citations?user=XvfdrGsAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-      <a href="https://github.com/adeepH-zz" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.linkedin.com/in/adeep-hande/" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
+    <a class="brand" href="./">Adeep Hande</a>
+    <nav>
+      <a href="#research">Research</a>
+      <a href="#news">News</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="cv.pdf" target="_blank" rel="noopener">CV</a>
+    </nav>
   </div>
 </header>
 
-<main>
-  <div class="wrap">
+<main class="wrap">
 
-    <section id="about">
-      <h2>About</h2>
-      <p>
-        I'm an ML Research Engineer on the Recommendation and Arbitration team at Comcast, where I work on
-        LLM post-training, data augmentation for cold-start recommendation, and large-scale search &amp;
-        content-discoverability systems for Xfinity. My research spans sequential recommendation, LLM
-        fine-tuning (SFT, DPO, RLHF, knowledge distillation), and ASR evaluation, with 7 papers across
-        venues including NAACL, EACL, CIKM, RecSys, SIGIR, ACL, and COLING, plus 2 filed patents.
-      </p>
-      <p>
-        I hold an M.S. in Data Science from Indiana University Bloomington and a B.S. in Computer Science
-        from IIIT Tiruchirappalli.
-      </p>
-    </section>
-
-    <section id="experience">
-      <h2>Experience</h2>
-
-      <div class="entry">
-        <div class="entry-head">
-          <div class="entry-title">ML Research Engineer, Comcast</div>
-          <div class="entry-meta">May 2024 &ndash; Present</div>
-        </div>
-        <div class="entry-sub">Recommendation and Arbitration team &middot; Washington, D.C.</div>
-        <ul class="bullets">
-          <li><strong>LLM post-training for user profile generation:</strong> built a teacher-student LLM post-training pipeline on a 3B-parameter student model &mdash; SFT with auxiliary reasoning objectives, DPO for alignment, and off-/on-policy evaluation &mdash; cascading fine-tuned models as teachers for downstream recommendation tasks.</li>
-          <li><strong>LLM data augmentation for cold-start recommendation:</strong> designed an LLM-based pipeline injecting synthetic user histories for cold-start items, achieving an 80% relative NDCG improvement while maintaining overall quality (CIKM 2026, EACL 2027).</li>
-          <li><strong>Xfinity Campaign Manager &mdash; forecasting:</strong> built campaign-level time-series forecasting models and ETL pipelines (Spark, Databricks, SQL) across EU and NA markets, with automated dashboarding for weekly media-buy pacing and budget allocation.</li>
-          <li><strong>Content discoverability simulator:</strong> architected a large-scale simulation using LLM-generated synthetic queries and historical clustering to evaluate upcoming content in the Xfinity TV ecosystem (RecSys 2025).</li>
-          <li><strong>Search quality evaluation:</strong> deployed a hybrid heuristic&ndash;LLM inference system for real-time moderation of 5M+ daily voice queries; introduced a time-aware dynamic lexicon reducing false positives by 35% (SIGIR 2025).</li>
-        </ul>
+  <div class="hero">
+    <!-- Swap for a photo: <img class="avatar" src="assets/profile.jpg" alt="Adeep Hande" /> -->
+    <div class="avatar" aria-hidden="true">AH</div>
+    <div>
+      <h1>Adeep Hande</h1>
+      <p class="role">ML Research Engineer, Comcast Applied AI Research &middot; Washington, D.C.</p>
+      <div class="links">
+        <a class="primary" href="cv.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+        <a href="mailto:adeephande1000@gmail.com">Email</a>
+        <a href="https://scholar.google.com/citations?user=XvfdrGsAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://github.com/adeepH-zz" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/adeep-hande/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
-
-      <div class="entry">
-        <div class="entry-head">
-          <div class="entry-title">Machine Learning Graduate Research Intern, Comcast</div>
-          <div class="entry-meta">May 2023 &ndash; Dec 2023</div>
-        </div>
-        <div class="entry-sub">Washington, D.C.</div>
-        <ul class="bullets">
-          <li><strong>Xfinity ASR evaluation tool:</strong> built an end-to-end speech evaluation framework benchmarking ASR quality (WER, embedding-based metrics) across diverse user demographics and acoustic conditions, scaling annotation throughput from 1K/day to 100K/week via automated proxy metrics.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="publications">
-      <h2>Publications &amp; Patents</h2>
-
-      <div class="pub">
-        <div class="pub-venue">NAACL 2027</div>
-        <div class="pub-title">LLM post-training for user profile generation for discovering sports segments at scale</div>
-      </div>
-      <div class="pub">
-        <div class="pub-venue">EACL 2027</div>
-        <div class="pub-title">Optimizing LLM augmentation for improving tail recommendations</div>
-      </div>
-      <div class="pub">
-        <div class="pub-venue">GRAIL @ CIKM 2026</div>
-        <div class="pub-title">From head to tail: optimizing LLM augmentations for improving sequential recommendations</div>
-      </div>
-      <div class="pub">
-        <div class="pub-venue">GEM @ ACL 2026</div>
-        <div class="pub-title">Evaluating ASR quality at scale on TV entertainment platforms</div>
-      </div>
-      <div class="pub">
-        <div class="pub-venue">RecSys 2025</div>
-        <div class="pub-title">Simulating discoverability for upcoming content on entertainment platforms</div>
-      </div>
-      <div class="pub">
-        <div class="pub-venue">SIGIR 2025</div>
-        <div class="pub-title">Content moderation in TV search: balancing compliance, relevance, and user experience</div>
-      </div>
-      <div class="pub">
-        <div class="pub-venue">Soft Computing 2022 / COLING 2020</div>
-        <div class="pub-title">Multi-task learning in Dravidian languages; Kannada code-mixed sentiment analysis &amp; offensive language detection</div>
-      </div>
-      <div class="pub">
-        <div class="pub-venue">Patents &middot; Comcast, 2025</div>
-        <div class="pub-title">2 patents filed &mdash; systems for content filtering; systems for enhancing content discoverability in TV systems</div>
-      </div>
-
-      <p style="margin-top:18px; font-size:14px;">
-        Full publication list with links and citation metrics on
-        <a href="https://scholar.google.com/citations?user=XvfdrGsAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.
-      </p>
-    </section>
-
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="tags">
-        <div class="group">
-          <div class="group-label">Machine Learning &amp; NLP</div>
-          <span class="chip">Large Language Models</span>
-          <span class="chip">LLM Finetuning (DPO, SFT, RLHF)</span>
-          <span class="chip">Knowledge Distillation</span>
-          <span class="chip">Recommendation Systems</span>
-          <span class="chip">Ranking</span>
-          <span class="chip">Content Moderation</span>
-          <span class="chip">Retrieval-Augmented Generation</span>
-          <span class="chip">Bias &amp; Fairness</span>
-          <span class="chip">ASR Evaluation</span>
-          <span class="chip">Information Retrieval</span>
-        </div>
-        <div class="group">
-          <div class="group-label">Frameworks &amp; Libraries</div>
-          <span class="chip">PyTorch</span>
-          <span class="chip">TensorFlow</span>
-          <span class="chip">Hugging Face Transformers</span>
-          <span class="chip">LangChain</span>
-          <span class="chip">OpenAI API</span>
-          <span class="chip">MLflow</span>
-          <span class="chip">Airflow</span>
-        </div>
-        <div class="group">
-          <div class="group-label">Data &amp; Infrastructure</div>
-          <span class="chip">Spark</span>
-          <span class="chip">Databricks</span>
-          <span class="chip">AWS SageMaker</span>
-          <span class="chip">AWS Lambda</span>
-          <span class="chip">EC2</span>
-          <span class="chip">Docker</span>
-          <span class="chip">FastAPI</span>
-          <span class="chip">MongoDB</span>
-          <span class="chip">Kafka</span>
-        </div>
-        <div class="group">
-          <div class="group-label">Languages</div>
-          <span class="chip">Python</span>
-          <span class="chip">SQL</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="education">
-      <h2>Education</h2>
-      <div class="edu-row">
-        <div>
-          <div class="edu-school">Indiana University Bloomington</div>
-          <div class="edu-degree">M.S. in Data Science</div>
-        </div>
-        <div class="edu-date">May 2024</div>
-      </div>
-      <div class="edu-row">
-        <div>
-          <div class="edu-school">Indian Institute of Information Technology, Tiruchirappalli</div>
-          <div class="edu-degree">B.S. in Computer Science</div>
-        </div>
-        <div class="edu-date">Apr 2022</div>
-      </div>
-    </section>
-
-    <section id="service">
-      <h2>Service</h2>
-      <p>100+ peer reviews across academic venues including InterSpeech, SIGIR, COLING, ACL ARR, and ICASSP.</p>
-    </section>
-
+    </div>
   </div>
+
+  <section id="research">
+    <h2>Research</h2>
+    <p class="lede">How do we make large-scale personalization both efficient and reliable?</p>
+    <p>
+      I work on <strong>LLM post-training</strong> and <strong>generative recommendation</strong>, with a growing
+      focus on making LLM inference fast and cheap enough to run at real production scale &mdash; not just accurate
+      in a paper. At Comcast, this means building teacher&ndash;student post-training pipelines for user profile
+      generation, using LLMs to solve cold-start recommendation, and serving all of it efficiently enough to run
+      over 5&ndash;10M users.
+    </p>
+    <div class="themes">
+      <div class="theme">
+        <h3>Generative &amp; sequential recommendation</h3>
+        <p>LLM-generated synthetic interactions and LLM-guided negative selection for cold-start and long-tail items (CIKM&nbsp;2026, EACL&nbsp;2027, NAACL&nbsp;2027).</p>
+      </div>
+      <div class="theme">
+        <h3>LLM post-training at scale</h3>
+        <p>SFT, DPO, and distillation pipelines for building compact, deployable models from larger teachers (NAACL&nbsp;2027).</p>
+      </div>
+      <div class="theme">
+        <h3>Efficient inference</h3>
+        <p>Self-hosted serving setups that make LLM-scale personalization affordable at a production scale most research never has to deal with.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="news">
+    <h2>News</h2>
+    <ul class="news" id="news-list">
+      <li><span class="date">Nov 2026</span><span>Presented &ldquo;From Head to Tail: LLM-Augmented Sequential Recommendation and Trade-off Optimization&rdquo; at <strong>GRAIL @ CIKM 2026</strong> in Rome. <a href="https://grail2026.github.io/papers/GRAIL2026_Hande.pdf" target="_blank" rel="noopener">[paper]</a></span></li>
+      <li><span class="date">Oct 2026</span><span>Two papers submitted to the <strong>NAACL 2027</strong> Industry Track: &ldquo;LLM-Driven Segment Discovery&rdquo; and &ldquo;Candidate Grounding Matters: LLM-Guided Negative Selection for Production Recommenders&rdquo;. <span class="badge">Under review</span></span></li>
+      <li><span class="date">2026</span><span>Submitted &ldquo;From Head to Tail: LLM-Augmented Sequential Recommendation and Trade-off Optimization&rdquo; to <strong>EACL 2027</strong>. <span class="badge">Under review</span></span></li>
+      <li><span class="date">2026</span><span>&ldquo;Evaluating ASR Quality at Scale on TV Entertainment Platforms&rdquo; accepted to <strong>GEM @ ACL 2026</strong>.</span></li>
+      <li><span class="date">2025</span><span>2 patents filed at Comcast &mdash; content filtering, and content discoverability for TV systems.</span></li>
+      <li class="news-more"><span class="date">Sep 2025</span><span>Presented &ldquo;Simulating Discoverability for Upcoming Content on Entertainment Platforms&rdquo; at <strong>RecSys 2025</strong> in Prague. <a href="https://dl.acm.org/doi/10.1145/3705328.3748137" target="_blank" rel="noopener">[paper]</a></span></li>
+      <li class="news-more"><span class="date">2025</span><span>&ldquo;Content Moderation in TV Search: Balancing Compliance, Relevance, and User Experience&rdquo; accepted to <strong>SIGIR 2025</strong>.</span></li>
+    </ul>
+    <button class="toggle" id="news-toggle" type="button" aria-expanded="false">Show older news</button>
+  </section>
+
+  <section id="publications">
+    <h2>Selected Publications</h2>
+
+    <div class="pub">
+      <div class="pub-title">From Head to Tail: LLM-Augmented Sequential Recommendation and Trade-off Optimization</div>
+      <div class="pub-authors"><span class="me">Adeep Hande</span>, Shaghayegh Agah, Neeraj Sharma, Yejin Kim, Karina H. Halevy, Sardar Hamidian</div>
+      <div class="pub-meta"><span class="venue">EACL 2027</span> <span class="badge">Under review</span>
+        <span class="pub-links"><a href="papers/hande2027-head-to-tail.pdf" target="_blank" rel="noopener">PDF</a></span></div>
+    </div>
+    <div class="pub">
+      <div class="pub-title">LLM-Driven Segment Discovery: Uncovering Latent User Intent at Scale</div>
+      <div class="pub-authors">Shaghayegh Agah<sup>*</sup>, <span class="me">Adeep Hande</span><sup>*</sup>, Neeraj Sharma <span class="eq">(* equal contribution)</span></div>
+      <div class="pub-meta"><span class="venue">NAACL 2027, Industry Track</span> <span class="badge">Under review</span>
+        <span class="pub-links"><a href="papers/agah2027-segment-discovery.pdf" target="_blank" rel="noopener">PDF</a></span></div>
+    </div>
+    <div class="pub">
+      <div class="pub-title">Candidate Grounding Matters: LLM-Guided Negative Selection for Production Recommenders</div>
+      <div class="pub-authors">Yejin Kim, <span class="me">Adeep Hande</span>, Shaghayegh Agah, Neeraj Sharma, Sardar Hamidian</div>
+      <div class="pub-meta"><span class="venue">NAACL 2027, Industry Track</span> <span class="badge">Under review</span>
+        <span class="pub-links"><a href="papers/kim2027-candidate-grounding.pdf" target="_blank" rel="noopener">PDF</a></span></div>
+    </div>
+    <div class="pub">
+      <div class="pub-title">From Head to Tail: LLM-Augmented Sequential Recommendation and Trade-off Optimization</div>
+      <div class="pub-authors"><span class="me">Adeep Hande</span>, Shaghayegh Agah, Neeraj Sharma, Karina Halevy, Sardar Hamidian</div>
+      <div class="pub-meta"><span class="venue">GRAIL Workshop @ CIKM 2026, Rome</span>
+        <span class="pub-links"><a href="https://grail2026.github.io/papers/GRAIL2026_Hande.pdf" target="_blank" rel="noopener">PDF</a></span></div>
+    </div>
+    <div class="pub">
+      <div class="pub-title">Evaluating ASR quality at scale on TV entertainment platforms</div>
+      <div class="pub-meta"><span class="venue">GEM Workshop @ ACL 2026</span>
+        <span class="pub-links"><a href="https://aclanthology.org/2026.gem-main.35.pdf" target="_blank" rel="noopener">PDF</a></span></div>
+    </div>
+    <div class="pub">
+      <div class="pub-title">Simulating discoverability for upcoming content on entertainment platforms</div>
+      <div class="pub-meta"><span class="venue">RecSys 2025</span>
+        <span class="pub-links"><a href="https://dl.acm.org/doi/10.1145/3705328.3748137" target="_blank" rel="noopener">Paper</a></span></div>
+    </div>
+    <div class="pub">
+      <div class="pub-title">Content moderation in TV search: balancing compliance, relevance, and user experience</div>
+      <div class="pub-meta"><span class="venue">SIGIR 2025</span>
+        <span class="pub-links"><a href="https://dl.acm.org/doi/10.1145/3726302.3731962" target="_blank" rel="noopener">Paper</a></span></div>
+    </div>
+
+    <a class="more" href="publications.html">Show all publications (26) &rarr;</a>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>ML Research Engineer, Comcast</h3>
+        <span class="entry-meta">May 2024 &ndash; Present</span>
+      </div>
+      <div class="entry-sub">Recommendation and Arbitration team &middot; Washington, D.C.</div>
+      <ul class="bullets">
+        <li><strong>LLM post-training for user profile generation:</strong> built a teacher&ndash;student LLM post-training pipeline on a 3B-parameter student model &mdash; SFT with auxiliary reasoning objectives, DPO for alignment, and off-/on-policy evaluation &mdash; cascading fine-tuned models as teachers for downstream recommendation tasks.</li>
+        <li><strong>LLM data augmentation for cold-start recommendation:</strong> designed an LLM-based pipeline injecting synthetic user histories for cold-start items, achieving an 80% relative NDCG improvement while maintaining overall quality (CIKM 2026, EACL 2027).</li>
+        <li><strong>Efficient inference at scale:</strong> built a self-hosted vLLM serving setup (4&times;A100) reaching ~326k tokens/sec for LLM-generated user profile inference across 5&ndash;10M users &mdash; roughly 650&times; cheaper than managed-API inference at that scale.</li>
+        <li><strong>Xfinity Campaign Manager &mdash; forecasting:</strong> built campaign-level time-series forecasting models and ETL pipelines (Spark, Databricks, SQL) across EU and NA markets, with automated dashboarding for weekly media-buy pacing and budget allocation.</li>
+        <li><strong>Content discoverability simulator:</strong> architected a large-scale simulation using LLM-generated synthetic queries and historical clustering to evaluate upcoming content in the Xfinity TV ecosystem (RecSys 2025).</li>
+        <li><strong>Search quality evaluation:</strong> deployed a hybrid heuristic&ndash;LLM inference system for real-time moderation of 5M+ daily voice queries; introduced a time-aware dynamic lexicon reducing false positives by 35% (SIGIR 2025).</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3>Machine Learning Graduate Research Intern, Comcast</h3>
+        <span class="entry-meta">May 2023 &ndash; Dec 2023</span>
+      </div>
+      <div class="entry-sub">Washington, D.C.</div>
+      <ul class="bullets">
+        <li><strong>Xfinity ASR evaluation tool:</strong> built an end-to-end speech evaluation framework benchmarking ASR quality (WER, embedding-based metrics) across diverse user demographics and acoustic conditions, scaling annotation throughput from 1K/day to 100K/week via automated proxy metrics.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="edu-row">
+      <div><h3>Indiana University Bloomington</h3><div class="edu-degree">M.S. in Data Science</div></div>
+      <span class="entry-meta">May 2024</span>
+    </div>
+    <div class="edu-row">
+      <div><h3>Indian Institute of Information Technology, Tiruchirappalli</h3><div class="edu-degree">B.S. in Computer Science</div></div>
+      <span class="entry-meta">Apr 2022</span>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill-row"><span class="label">ML &amp; NLP</span><span class="vals">Large language models, LLM fine-tuning (SFT, DPO, RLHF), knowledge distillation, recommendation systems, ranking, RAG, information retrieval, content moderation, bias &amp; fairness, ASR evaluation</span></div>
+    <div class="skill-row"><span class="label">Frameworks</span><span class="vals">PyTorch, TensorFlow, Hugging Face Transformers, vLLM, LangChain, OpenAI API, MLflow, Airflow</span></div>
+    <div class="skill-row"><span class="label">Data &amp; infra</span><span class="vals">Spark, Databricks, AWS (SageMaker, Lambda, EC2), Docker, FastAPI, MongoDB, Kafka</span></div>
+    <div class="skill-row"><span class="label">Languages</span><span class="vals">Python, SQL</span></div>
+  </section>
+
+  <section id="service">
+    <h2>Academic Service</h2>
+    <p>100+ peer reviews across academic venues including InterSpeech, SIGIR, COLING, ACL ARR, and ICASSP.</p>
+  </section>
+
+  <section id="outside">
+    <h2>Outside Research</h2>
+    <p>Outside of work, I follow Formula&nbsp;1 and travel when I can &mdash; most recently to Mexico, Guatemala, Spain, Czechia, Austria, Germany, Thailand, and Vietnam.</p>
+  </section>
+
 </main>
 
 <footer>
   <div class="wrap">
-    Adeep Hande &middot; Washington, D.C. &middot; <a href="mailto:adeephande1000@gmail.com">adeephande1000@gmail.com</a>
+    <span>&copy; 2026 Adeep Hande</span>
+    <span><a href="cv.pdf" target="_blank" rel="noopener">CV</a> &middot; <a href="publications.html">Publications</a> &middot; <a href="mailto:adeephande1000@gmail.com">Email</a></span>
   </div>
 </footer>
 
+<script>
+  (function(){
+    var list = document.getElementById('news-list');
+    var btn = document.getElementById('news-toggle');
+    btn.addEventListener('click', function(){
+      var open = list.classList.toggle('expanded');
+      btn.setAttribute('aria-expanded', open);
+      btn.textContent = open ? 'Show less' : 'Show older news';
+    });
+  })();
+</script>
 </body>
 </html>
