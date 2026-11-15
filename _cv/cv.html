@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Adeep Hande CV</title>
+<!--
+  Source for cv.pdf. Edit this file, then regenerate the PDF from the repo root:
+
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --disable-gpu \
+    --no-pdf-header-footer --print-to-pdf=cv.pdf "file://$PWD/_cv/cv.html"
+
+  The leading underscore keeps this folder off the published GitHub Pages site.
+-->
+<style>
+  @page { size: Letter; margin: 0.5in 0.65in; }
+  :root { --green:#1a7a5e; --gray:#666; --rule:#d9d9d9; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family: Arial, Helvetica, sans-serif; font-size:9.6pt; line-height:1.27; color:#222; }
+  a { color:inherit; text-decoration:none; }
+  h1 { font-size:22pt; margin:0 0 2px; font-weight:700; color:#111; }
+  .contact { color:var(--gray); font-size:9.5pt; margin-bottom:6px; }
+  .contact span.sep { margin:0 6px; }
+  h2 { color:var(--green); font-size:11.5pt; margin:11px 0 5px; padding-bottom:3px; border-bottom:1px solid var(--rule); }
+  h3 { font-size:10pt; margin:8px 0 2px; }
+  .sub { font-style:italic; color:var(--gray); font-size:9.5pt; margin-bottom:3px; }
+  p { margin:0 0 4px; }
+  ul { margin:2px 0 4px; padding-left:22px; }
+  ul li { margin-bottom:2px; }
+  ul li::marker { color:var(--green); }
+  table.edu { border-collapse:collapse; margin-left:30px; }
+  table.edu td { padding:2px 28px 4px 0; vertical-align:top; }
+  ol.pubs { margin:2px 0 4px; padding-left:30px; }
+  ol.pubs li { margin-bottom:2px; padding-left:6px; }
+  ol.pubs li::marker { font-size:11pt; }
+  .me { font-weight:700; }
+  .venue { font-style:italic; }
+  .yr { font-weight:700; margin:6px 0 1px; }
+  .skills p { margin-bottom:2px; }
+  section { break-inside:auto; }
+  li, h3 { break-inside:avoid; }
+  h2, h3, .yr { break-after:avoid; }
+</style>
+</head>
+<body>
+
+<h1>Adeep Hande</h1>
+<div class="contact">
+  <a href="mailto:adeephande1000@gmail.com">adeephande1000@gmail.com</a><span class="sep">|</span>
+  <a href="https://scholar.google.com/citations?user=XvfdrGsAAAAJ&amp;hl=en">Google Scholar</a><span class="sep">|</span>
+  <a href="https://www.linkedin.com/in/adeep-hande/">LinkedIn</a><span class="sep">|</span>
+  <a href="https://adeeph-zz.github.io">Website</a><span class="sep">|</span>
+  Washington, D.C.
+</div>
+
+<h2>Research Interests</h2>
+<p>My research centers on making large language models efficient and reliable enough to personalize at production scale. This spans three threads: (1) <strong>LLM post-training</strong> — supervised fine-tuning, DPO, and knowledge distillation for building compact, deployable models from larger teachers; (2) <strong>generative and sequential recommendation</strong> — using LLM-generated synthetic data to address cold-start and long-tail recommendation; and (3) <strong>efficient LLM inference</strong> — serving infrastructure that makes LLM-scale personalization affordable at real production scale rather than only accurate in a paper. I am interested in continuing this line of work, with a particular focus on efficient post-training and inference methods, during a PhD.</p>
+
+<h2>Education</h2>
+<table class="edu">
+  <tr><td>Indiana University Bloomington</td><td>M.S. in Data Science (GPA 3.8)</td><td>May 2024</td></tr>
+  <tr><td>Indian Institute of Information Technology,<br/>Tiruchirappalli</td><td>B.S. in Computer Science (GPA 3.3)</td><td>Apr 2022</td></tr>
+</table>
+
+<h2>Research &amp; Industry Experience</h2>
+<h3>ML Research Engineer, Comcast Applied AI Research — Washington, D.C.</h3>
+<div class="sub">Recommendation and Arbitration team · May 2024 – Present</div>
+<ul>
+  <li><strong>LLM-driven audience segment discovery at scale.</strong> Built and deployed a teacher-student LLM post-training pipeline (reasoning-aware SFT, DPO, and off-/on-policy evaluation) to generate and operationalize latent sports-audience segments across millions of users; achieved production-scale serving at 0.6% of enterprise-model cost through model distillation (NAACL 2027).</li>
+  <li><strong>LLM data augmentation for cold-start recommendation.</strong> Designed an LLM-based data-augmentation pipeline that injects synthetic user histories for cold-start items, achieving an 80% relative NDCG improvement for cold-start items while maintaining overall recommendation quality (CIKM 2026, EACL 2027).</li>
+  <li><strong>Efficient inference at scale.</strong> Built a self-hosted vLLM serving setup (4×A100) reaching ~326k tokens/sec for LLM-generated user-profile inference across 5–10M users, roughly 650× cheaper than managed-API inference at that scale.</li>
+  <li><strong>Content discoverability simulation.</strong> Architected a large-scale simulation using LLM-generated synthetic queries and historical clustering to evaluate the discoverability of upcoming content in the Xfinity TV ecosystem (RecSys 2025).</li>
+  <li><strong>Forecasting infrastructure.</strong> Developed campaign-level time-series forecasting models and ETL pipelines (Spark, Databricks, SQL) for Xfinity Campaign Manager across EU and NA markets, with automated dashboarding for weekly media-buy pacing and budget allocation.</li>
+</ul>
+
+<h3>Machine Learning Graduate Research Intern, Comcast — Washington, D.C.</h3>
+<div class="sub">May 2023 – Dec 2023</div>
+<ul>
+  <li><strong>ASR evaluation.</strong> Built an end-to-end speech evaluation framework benchmarking ASR quality (WER, embedding-based metrics) across diverse user demographics and acoustic conditions, scaling annotation throughput from 1K/day to 100K/week via automated proxy metrics (GEM @ ACL 2026).</li>
+  <li><strong>Search quality evaluation.</strong> Deployed a hybrid heuristic–LLM inference system for real-time moderation of 5M+ daily voice queries, flagging biased or policy-violating results; introduced a time-aware dynamic lexicon that reduced false positives by 35% (SIGIR 2025).</li>
+</ul>
+
+<h2>Publications</h2>
+<div class="yr">Under Review</div>
+<ol class="pubs">
+  <li>“From Head to Tail: LLM-Augmented Sequential Recommendation and Trade-off Optimization” — <span class="me">Adeep Hande</span>, Shaghayegh Agah, Neeraj Sharma, Yejin Kim, Karina H. Halevy, Sardar Hamidian — <span class="venue">EACL 2027</span></li>
+  <li>“LLM-Driven Segment Discovery: Uncovering Latent User Intent at Scale” — Shaghayegh Agah*, <span class="me">Adeep Hande</span>*, Neeraj Sharma (*equal contribution) — <span class="venue">NAACL 2027, Industry Track</span></li>
+  <li>“Candidate Grounding Matters: LLM-Guided Negative Selection for Production Recommenders” — Yejin Kim, <span class="me">Adeep Hande</span>, Shaghayegh Agah, Neeraj Sharma, Sardar Hamidian — <span class="venue">NAACL 2027, Industry Track</span></li>
+</ol>
+
+<div class="yr">2026</div>
+<ol class="pubs">
+  <li>“From Head to Tail: LLM-Augmented Sequential Recommendation and Trade-off Optimization” — <span class="me">Adeep Hande</span>, Shaghayegh Agah, Neeraj Sharma, Karina Halevy, Sardar Hamidian — <span class="venue">GRAIL Workshop @ CIKM 2026, Rome</span></li>
+  <li>“Evaluating ASR Quality at Scale on TV Entertainment Platforms” — <span class="me">Adeep Hande</span>, Kishorekumar Sundararajan, Yidnekachew Endale, Akshatha Bapu KrishnaSwamy, Sachin Dabral, Dawn Reed, Michael Pereira — <span class="venue">GEM Workshop @ ACL 2026</span></li>
+</ol>
+
+<div class="yr">2025</div>
+<ol class="pubs">
+  <li>“Simulating Discoverability for Upcoming Content on Entertainment Platforms” — <span class="me">Adeep Hande</span>, et al. — <span class="venue">RecSys 2025, Prague</span></li>
+  <li>“Content Moderation in TV Search: Balancing Compliance, Relevance, and User Experience” — <span class="me">Adeep Hande</span>, et al. — <span class="venue">SIGIR 2025</span></li>
+  <li>“Do Images Really Do the Talking? Analyzing the Significance of Images in Tamil Troll Meme Classification” — Siddhanth U. Hegde, <span class="me">Adeep Hande</span>, Ruba Priyadharshini, Sajeetha Thavareesan, Ratnasingam Sakuntharaj, S. Thangasamy, B. Bharathi, Bharathi Raja Chakravarthi — <span class="venue">Advances in Computational Intelligence (Springer), 2025</span></li>
+</ol>
+
+<div class="yr">2022</div>
+<ol class="pubs">
+  <li>“Multi-task Learning in Under-resourced Dravidian Languages” — <span class="me">Adeep Hande</span>, Siddhanth U. Hegde, Bharathi Raja Chakravarthi — <span class="venue">Journal of Data, Information and Management (Springer)</span></li>
+  <li>“How Can We Detect Homophobia and Transphobia? Experiments in a Multilingual Code-Mixed Setting for Social Media Governance” — Bharathi Raja Chakravarthi, <span class="me">Adeep Hande</span>, Rahul Ponnusamy, Prasanna Kumar Kumaresan, Ruba Priyadharshini — <span class="venue">International Journal of Information Management Data Insights (Elsevier)</span></li>
+  <li>“The Best of Both Worlds: Dual Channel Language Modeling for Hope Speech Detection in Low-resourced Kannada” — <span class="me">Adeep Hande</span>, Siddhanth U. Hegde, Sivanesan Sangeetha, Ruba Priyadharshini, Bharathi Raja Chakravarthi — <span class="venue">LT-EDI Workshop @ ACL 2022</span></li>
+  <li>“DE-ABUSE@TamilNLP-ACL 2022: Transliteration as Data Augmentation for Abuse Detection in Tamil” — Vasanth Palanikumar, Sean Benhur, <span class="me">Adeep Hande</span>, Bharathi Raja Chakravarthi — <span class="venue">DravidianLangTech Workshop @ ACL 2022</span></li>
+  <li>“Findings of the Shared Task on Multi-task Learning in Dravidian Languages” — Bharathi Raja Chakravarthi, Ruba Priyadharshini, C. N. Subalalitha, Sangeetha Sivanesan, Malliga Subramanian, Kogilavani Shanmugavadivel, Parameswari Krishnamurthy, <span class="me">Adeep Hande</span>, Siddhanth U. Hegde, Roshan Nayak, et al. — <span class="venue">DravidianLangTech Workshop @ ACL 2022</span></li>
+  <li>“Findings of the Second Shared Task on Troll Meme Classification in Tamil” — Shardul Suryawanshi, Bharathi Raja Chakravarthi, Mihael Arcan, Susan Levy, Paul Buitelaar, Prasanna Kumar Kumaresan, Rahul Ponnusamy, <span class="me">Adeep Hande</span> — <span class="venue">DravidianLangTech Workshop @ ACL 2022</span></li>
+  <li>“Findings of the Shared Task on Emotion Analysis in Tamil” — Sean Benhur, et al. (incl. <span class="me">Adeep Hande</span>) — <span class="venue">DravidianLangTech Workshop @ ACL 2022</span></li>
+</ol>
+
+<div class="yr">2021</div>
+<ol class="pubs">
+  <li>“Domain Identification of Scientific Articles Using Transfer Learning and Ensembles” — <span class="me">Adeep Hande</span>, Karthik Puranik, Ruba Priyadharshini, Bharathi Raja Chakravarthi — <span class="venue">PAKDD 2021 (Springer)</span></li>
+  <li>“Evaluating Pretrained Transformer-based Models for COVID-19 Fake News Detection” — <span class="me">Adeep Hande</span>, Karthik Puranik, Ruba Priyadharshini, Sajeetha Thavareesan, Bharathi Raja Chakravarthi — <span class="venue">ICCMC 2021 (IEEE)</span></li>
+  <li>“Offensive Language Identification in Low-resourced Code-mixed Dravidian Languages Using Pseudo-labeling” — <span class="me">Adeep Hande</span>, Karthik Puranik, Konthala Yasaswini, Ruba Priyadharshini, Sajeetha Thavareesan, Anbukkarasi Sampath, Kogilavani Shanmugavadivel, Durairaj Thenmozhi, Bharathi Raja Chakravarthi — <span class="venue">arXiv preprint</span></li>
+  <li>“IIITT@LT-EDI-EACL2021 – Hope Speech Detection: There Is Always Hope in Transformers” — Karthik Puranik, <span class="me">Adeep Hande</span>, Ruba Priyadharshini, Sajeetha Thavareesan, Bharathi Raja Chakravarthi — <span class="venue">LT-EDI Workshop @ EACL 2021</span></li>
+  <li>“UVCE-IIITT@DravidianLangTech-EACL2021: Tamil Troll Meme Classification: You Need to Pay More Attention” — Siddhanth U. Hegde, <span class="me">Adeep Hande</span>, Ruba Priyadharshini, Sajeetha Thavareesan, Bharathi Raja Chakravarthi — <span class="venue">DravidianLangTech Workshop @ EACL 2021</span></li>
+  <li>“IIITT@DravidianLangTech-EACL2021: Transfer Learning for Offensive Language Detection in Dravidian Languages” — Konthala Yasaswini, Karthik Puranik, <span class="me">Adeep Hande</span>, Ruba Priyadharshini, Sajeetha Thavareesan, Bharathi Raja Chakravarthi — <span class="venue">DravidianLangTech Workshop @ EACL 2021</span></li>
+  <li>“IIITT at CASE 2021 Task 1: Leveraging Pretrained Language Models for Multilingual Protest Detection” — Pawan Kalyan, Duddukunta Reddy, <span class="me">Adeep Hande</span>, Ruba Priyadharshini, Ratnasingam Sakuntharaj, Bharathi Raja Chakravarthi — <span class="venue">CASE Workshop @ ACL-IJCNLP 2021</span></li>
+  <li>“Attentive Fine-tuning of Transformers for Translation of Low-resourced Languages @LoResMT 2021” — Karthik Puranik, <span class="me">Adeep Hande</span>, Ruba Priyadharshini, Thenmozhi Durairaj, Anbukkarasi Sampath, Kingston Pal Thamburaj, Bharathi Raja Chakravarthi — <span class="venue">LoResMT Workshop @ MT Summit 2021</span></li>
+  <li>“Hypers at ComMA@ICON: Modelling Aggressive, Gender Bias and Communal Bias Identification” — Sean Benhur, Roshan Nayak, Kanchana Sivanraju, <span class="me">Adeep Hande</span>, Subalalitha Chinnaudayar Navaneethakrishnan, Ruba Priyadharshini, Bharathi Raja Chakravarthi — <span class="venue">ICON 2021 (Shared Task)</span></li>
+  <li>“Findings of the Sentiment Analysis of Dravidian Languages in Code-Mixed Text” — Bharathi Raja Chakravarthi, Ruba Priyadharshini, Sajeetha Thavareesan, Dhivya Chinnappa, Durairaj Thenmozhi, Elizabeth Sherly, John P. McCrae, <span class="me">Adeep Hande</span>, Rahul Ponnusamy, Shubhanker Banerjee, et al. — <span class="venue">arXiv preprint</span></li>
+</ol>
+
+<div class="yr">2020</div>
+<ol class="pubs">
+  <li>“KanCMD: Kannada CodeMixed Dataset for Sentiment Analysis and Offensive Language Detection” — <span class="me">Adeep Hande</span>, Ruba Priyadharshini, Bharathi Raja Chakravarthi — <span class="venue">PEOPLES Workshop @ COLING 2020</span></li>
+</ol>
+
+<h2>Patents</h2>
+<ol class="pubs">
+  <li>Systems for Content Filtering. Comcast, filed 2025.</li>
+  <li>Systems for Enhancing Content Discoverability in TV Systems. Comcast, filed 2025.</li>
+</ol>
+
+<h2>Academic Service</h2>
+<h3>Workshop Organizing</h3>
+<ul>
+  <li>Co-organizer, Workshop on Multimodal Machine Learning in Low-Resource Languages (MMLow), co-located with ICON 2022.</li>
+</ul>
+<h3>Program Committee Membership</h3>
+<ul>
+  <li>Program committee member for shared-task workshops at EACL 2021 and ACL 2022 (DravidianLangTech / LT-EDI workshop series).</li>
+</ul>
+<h3>Peer Review</h3>
+<ul>
+  <li>100+ peer reviews across academic venues, including ACL Rolling Review, ACL GEM, InterSpeech, ICASSP, SIGIR, COLING, DravidianLangTech, ACM WWW (main conference), ACM Multimedia (main conference), IEEE SLT workshops, and the KDD Datasets &amp; Benchmarks Track.</li>
+</ul>
+
+<h2>Technical Skills</h2>
+<div class="skills">
+  <p><strong>Machine Learning &amp; NLP:</strong> Large Language Models, LLM Fine-Tuning (DPO, SFT, RLHF, Knowledge Distillation), Recommendation Systems, Ranking, Content Moderation, Retrieval-Augmented Generation, Bias &amp; Fairness, ASR Evaluation, Information Retrieval</p>
+  <p><strong>Frameworks &amp; Libraries:</strong> PyTorch, TensorFlow, Hugging Face Transformers, vLLM, LangChain, OpenAI API, MLflow, Airflow</p>
+  <p><strong>Data &amp; Infrastructure:</strong> Spark, Databricks, AWS (SageMaker, Lambda, EC2), Docker, FastAPI, MongoDB, Kafka</p>
+  <p><strong>Languages:</strong> Python, SQL</p>
+</div>
+
+<h2>References</h2>
+<p>Available upon request.</p>
+
+</body>
+</html>
