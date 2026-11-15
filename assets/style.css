@@ -200,13 +200,3 @@ footer .wrap{display:flex; justify-content:space-between; gap:12px; flex-wrap:wr
 .pub-authors sup{font-size:.7em; margin-left:1px;}
 .pub-authors .eq{color:var(--text-faint); font-size:12.5px; margin-left:4px;}
 
-/* outside research + travel photo */
-.outside{display:grid; grid-template-columns:1fr 220px; gap:24px; align-items:start;}
-.outside p{margin:0;}
-.travel-photo{margin:0;}
-.travel-photo img{display:block; width:100%; height:auto; border-radius:10px; border:1px solid var(--border);}
-.travel-photo figcaption{font-size:12.5px; color:var(--text-faint); margin-top:6px; text-align:center;}
-@media (max-width:680px){
-  .outside{grid-template-columns:1fr;}
-  .travel-photo{max-width:280px;}
-}
