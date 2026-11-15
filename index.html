@@ -4,9 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Adeep Hande</title>
-<meta name="description" content="Adeep Hande — ML Research Engineer at Comcast Applied AI Research working on LLM post-training, generative recommendation, and efficient inference." />
+<meta name="description" content="Adeep Hande, ML Research Engineer at Comcast Applied AI Research working on LLM post-training, generative recommendation, and efficient inference." />
 <meta property="og:title" content="Adeep Hande" />
-<meta property="og:description" content="ML Research Engineer at Comcast Applied AI Research — LLM post-training, generative recommendation, efficient inference." />
+<meta property="og:description" content="ML Research Engineer at Comcast Applied AI Research working on LLM post-training, generative recommendation, and efficient inference." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://adeeph-zz.github.io/" />
 <meta name="twitter:card" content="summary" />
@@ -52,11 +52,10 @@
     <h2>Research</h2>
     <p class="lede">How do we make large-scale personalization both efficient and reliable?</p>
     <p>
-      I work on <strong>LLM post-training</strong> and <strong>generative recommendation</strong>, with a growing
-      focus on making LLM inference fast and cheap enough to run at real production scale &mdash; not just accurate
-      in a paper. At Comcast, this means building teacher&ndash;student post-training pipelines for user profile
-      generation, using LLMs to solve cold-start recommendation, and serving all of it efficiently enough to run
-      over 5&ndash;10M users.
+      I work on <strong>LLM post-training</strong> and <strong>generative recommendation</strong>. Lately I've been
+      focused on inference cost: getting LLMs fast and cheap enough to run for millions of users. At Comcast, I build
+      teacher-student pipelines that generate user profiles, use LLMs to improve recommendations for new and long-tail
+      items, and serve these models to 5 to 10 million users.
     </p>
     <div class="themes">
       <div class="theme">
@@ -65,11 +64,11 @@
       </div>
       <div class="theme">
         <h3>LLM post-training at scale</h3>
-        <p>SFT, DPO, and distillation pipelines for building compact, deployable models from larger teachers (NAACL&nbsp;2027).</p>
+        <p>SFT, DPO, and distillation to train small models from larger teachers, cheap enough to deploy (NAACL&nbsp;2027).</p>
       </div>
       <div class="theme">
         <h3>Efficient inference</h3>
-        <p>Self-hosted serving setups that make LLM-scale personalization affordable at a production scale most research never has to deal with.</p>
+        <p>Self-hosted vLLM serving that runs LLM personalization at roughly 650&times; lower cost than managed APIs.</p>
       </div>
     </div>
   </section>
@@ -81,7 +80,7 @@
       <li><span class="date">Oct 2026</span><span>Two papers submitted to the <strong>NAACL 2027</strong> Industry Track: &ldquo;LLM-Driven Segment Discovery&rdquo; and &ldquo;Candidate Grounding Matters: LLM-Guided Negative Selection for Production Recommenders&rdquo;. <span class="badge">Under review</span></span></li>
       <li><span class="date">2026</span><span>Submitted &ldquo;From Head to Tail: LLM-Augmented Sequential Recommendation and Trade-off Optimization&rdquo; to <strong>EACL 2027</strong>. <span class="badge">Under review</span></span></li>
       <li><span class="date">2026</span><span>&ldquo;Evaluating ASR Quality at Scale on TV Entertainment Platforms&rdquo; accepted to <strong>GEM @ ACL 2026</strong>.</span></li>
-      <li><span class="date">2025</span><span>2 patents filed at Comcast &mdash; content filtering, and content discoverability for TV systems.</span></li>
+      <li><span class="date">2025</span><span>2 patents filed at Comcast, on content filtering and on content discoverability for TV systems.</span></li>
       <li class="news-more"><span class="date">Sep 2025</span><span>Presented &ldquo;Simulating Discoverability for Upcoming Content on Entertainment Platforms&rdquo; at <strong>RecSys 2025</strong> in Prague. <a href="https://dl.acm.org/doi/10.1145/3705328.3748137" target="_blank" rel="noopener">[paper]</a></span></li>
       <li class="news-more"><span class="date">2025</span><span>&ldquo;Content Moderation in TV Search: Balancing Compliance, Relevance, and User Experience&rdquo; accepted to <strong>SIGIR 2025</strong>.</span></li>
     </ul>
@@ -169,12 +168,12 @@
       </div>
       <div class="entry-sub">Recommendation and Arbitration team &middot; Washington, D.C.</div>
       <ul class="bullets">
-        <li><strong>LLM post-training for user profile generation:</strong> built a teacher&ndash;student LLM post-training pipeline on a 3B-parameter student model &mdash; SFT with auxiliary reasoning objectives, DPO for alignment, and off-/on-policy evaluation &mdash; cascading fine-tuned models as teachers for downstream recommendation tasks.</li>
+        <li><strong>LLM post-training for user profile generation:</strong> built a teacher-student post-training pipeline for a 3B-parameter student model, using SFT with auxiliary reasoning objectives, DPO for alignment, and off- and on-policy evaluation. The fine-tuned models then act as teachers for downstream recommendation tasks.</li>
         <li><strong>LLM data augmentation for cold-start recommendation:</strong> designed an LLM-based pipeline injecting synthetic user histories for cold-start items, achieving an 80% relative NDCG improvement while maintaining overall quality (CIKM 2026, EACL 2027).</li>
-        <li><strong>Efficient inference at scale:</strong> built a self-hosted vLLM serving setup (4&times;A100) reaching ~326k tokens/sec for LLM-generated user profile inference across 5&ndash;10M users &mdash; roughly 650&times; cheaper than managed-API inference at that scale.</li>
-        <li><strong>Xfinity Campaign Manager &mdash; forecasting:</strong> built campaign-level time-series forecasting models and ETL pipelines (Spark, Databricks, SQL) across EU and NA markets, with automated dashboarding for weekly media-buy pacing and budget allocation.</li>
+        <li><strong>Efficient inference at scale:</strong> built a self-hosted vLLM serving setup on 4&times;A100 GPUs that reaches about 326k tokens/sec for user profile inference across 5 to 10 million users, roughly 650&times; cheaper than managed APIs at that scale.</li>
+        <li><strong>Xfinity Campaign Manager forecasting:</strong> built campaign-level time-series forecasting models and ETL pipelines (Spark, Databricks, SQL) across EU and NA markets, with automated dashboarding for weekly media-buy pacing and budget allocation.</li>
         <li><strong>Content discoverability simulator:</strong> architected a large-scale simulation using LLM-generated synthetic queries and historical clustering to evaluate upcoming content in the Xfinity TV ecosystem (RecSys 2025).</li>
-        <li><strong>Search quality evaluation:</strong> deployed a hybrid heuristic&ndash;LLM inference system for real-time moderation of 5M+ daily voice queries; introduced a time-aware dynamic lexicon reducing false positives by 35% (SIGIR 2025).</li>
+        <li><strong>Search quality evaluation:</strong> deployed a hybrid system combining heuristics and LLMs for real-time moderation of 5M+ daily voice queries; introduced a time-aware dynamic lexicon reducing false positives by 35% (SIGIR 2025).</li>
       </ul>
     </div>
 
@@ -217,7 +216,7 @@
 
   <section id="outside">
     <h2>Outside Research</h2>
-    <p>Outside of work, I follow Formula&nbsp;1 and travel when I can &mdash; most recently to Peru, Mexico, Guatemala, Spain, Czechia, Austria, Germany, and Thailand.</p>
+    <p>Outside of work, I follow Formula&nbsp;1 and travel when I can. Recent trips include Peru, Mexico, Guatemala, Spain, Czechia, Austria, Germany, and Thailand.</p>
     <p>After losing about 100&nbsp;lbs, I got into hiking, running, and powerlifting:</p>
     <ul class="bullets">
       <li><strong>Hiking:</strong> summited Volc&aacute;n de Fuego in Guatemala, and my first 5,000&nbsp;m peak, Pallay Punchu, in Peru.</li>
