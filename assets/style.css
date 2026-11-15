@@ -200,3 +200,7 @@ footer .wrap{display:flex; justify-content:space-between; gap:12px; flex-wrap:wr
 .pub-authors sup{font-size:.7em; margin-left:1px;}
 .pub-authors .eq{color:var(--text-faint); font-size:12.5px; margin-left:4px;}
 
+
+/* publication groups */
+.group-head{font-family:var(--serif); font-size:1.2rem; font-weight:600; margin:40px 0 4px; padding-top:20px; border-top:1px solid var(--border);}
+.group-head span{display:block; font-family:var(--sans); font-size:13.5px; font-weight:400; color:var(--text-faint); margin-top:2px;}
