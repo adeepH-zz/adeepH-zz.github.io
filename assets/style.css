@@ -1,31 +1,32 @@
+/* Heading font is "--serif" for historical reasons; it is now Manrope (sans). */
 :root{
-  --bg:#fbfaf7;
-  --bg-soft:#f3f1ec;
-  --border:#e4e0d8;
-  --text:#1c1b19;
-  --text-dim:#55524c;
-  --text-faint:#8a867e;
-  --accent:#a3452a;
-  --accent-soft:#f6e7e1;
-  --review:#8a5a00;
-  --review-soft:#fbf0d9;
-  --serif:'Source Serif 4','Iowan Old Style','Palatino Linotype',Georgia,serif;
+  --bg:#ffffff;
+  --bg-soft:#f6f8f8;
+  --border:#e5e7eb;
+  --text:#0a0a0a;
+  --text-dim:#4b5563;
+  --text-faint:#8b929c;
+  --accent:#0f766e;
+  --accent-soft:#e6f4f2;
+  --review:#92400e;
+  --review-soft:#fef3c7;
+  --serif:'Manrope','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
   --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
   --mono:'JetBrains Mono','SF Mono',Consolas,monospace;
   --maxw:780px;
 }
 @media (prefers-color-scheme: dark){
   :root{
-    --bg:#141416;
-    --bg-soft:#1c1c1f;
-    --border:#2c2c30;
-    --text:#ecebe8;
-    --text-dim:#b0aea8;
-    --text-faint:#7c7a75;
-    --accent:#e8907a;
-    --accent-soft:#3a241e;
-    --review:#e6b85c;
-    --review-soft:#3a2e15;
+    --bg:#0d1111;
+    --bg-soft:#151b1b;
+    --border:#243030;
+    --text:#e8ecec;
+    --text-dim:#a7b0b0;
+    --text-faint:#6f7979;
+    --accent:#2dd4bf;
+    --accent-soft:#0f2e2a;
+    --review:#fbbf24;
+    --review-soft:#3a2e12;
   }
 }
 *{box-sizing:border-box;}
@@ -57,7 +58,7 @@ strong{color:var(--text); font-weight:600;}
   height:56px; gap:16px;
 }
 .brand{
-  font-family:var(--serif); font-weight:600; font-size:17px; color:var(--text);
+  font-family:var(--serif); font-weight:800; font-size:17px; color:var(--text); letter-spacing:-0.02em;
   white-space:nowrap;
 }
 .brand:hover{text-decoration:none;}
@@ -78,8 +79,8 @@ strong{color:var(--text); font-weight:600;}
   object-fit:cover;
 }
 .hero h1{
-  font-family:var(--serif); font-weight:600;
-  font-size:2.4rem; line-height:1.15; margin:0 0 6px; letter-spacing:-0.01em;
+  font-family:var(--serif); font-weight:800;
+  font-size:2.4rem; line-height:1.15; margin:0 0 6px; letter-spacing:-0.025em;
 }
 .hero .role{color:var(--text-dim); margin:0 0 16px; font-size:1.02rem;}
 .links{display:flex; flex-wrap:wrap; gap:8px;}
@@ -91,20 +92,21 @@ strong{color:var(--text); font-weight:600;}
 }
 .links a:hover{border-color:var(--accent); color:var(--accent); text-decoration:none;}
 .links a.primary{background:var(--accent); border-color:var(--accent); color:#fff;}
-@media (prefers-color-scheme: dark){ .links a.primary{color:#141416;} }
+@media (prefers-color-scheme: dark){ .links a.primary{color:#0d1111;} }
 .links a.primary:hover{opacity:.9; color:#fff;}
 
 /* ---------- sections ---------- */
 section{padding:28px 0 12px;}
 h2{
-  font-family:var(--serif); font-weight:600; font-size:1.5rem;
-  margin:0 0 18px; letter-spacing:-0.005em;
+  font-family:var(--serif); font-weight:700; font-size:1.45rem;
+  margin:0 0 18px; letter-spacing:-0.02em;
 }
 h3{font-size:1rem; font-weight:600; margin:0 0 4px;}
 p{color:var(--text-dim); margin:0 0 14px;}
 .lede{
-  font-family:var(--serif); font-size:1.3rem; line-height:1.4;
-  color:var(--text); font-style:italic; margin:0 0 16px;
+  font-family:var(--serif); font-size:1.25rem; line-height:1.4; font-weight:600;
+  color:var(--text); margin:0 0 16px; padding-left:14px; border-left:3px solid var(--accent);
+  letter-spacing:-0.01em;
 }
 hr.sep{border:none; border-top:1px solid var(--border); margin:28px 0 0;}
 
